@@ -1,12 +1,34 @@
-import React from 'react'
+import React from "react";
+import {Bookmark} from "lucide-react";
 
-const Card = () => {
-  return (
-      <div className="card">
-        <h1>Sarthak Patel</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, blanditiis!</p>
-      </div>
-  )
-}
+const Card = (props) => {
+    return (
+        <div className="card">
+            <div className="top">
+                <img src={props.brandLogo}/>
+                <button>
+                    Save <Bookmark size={12} />
+                </button>
+            </div>
+            <div className="center">
+                <h3>
+                    {props.company} <span>{props.posted}</span>
+                </h3>
+                <h2>{props.role}</h2>
+                <div>
+                    <h4>{props.tag1}</h4>
+                    <h4>{props.tag2}</h4>
+                </div>
+            </div>
+            <div className="bottom">
+                <div>
+                    <h3>{props.pay}</h3>
+                    <p>{props.location}</p>
+                </div>
+                <button>Apply Now</button>
+            </div>
+        </div>
+    );
+};
 
-export default Card
+export default Card;
