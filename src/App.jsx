@@ -1,7 +1,8 @@
 function App() {
     return (
-        <div className="bg-red-600">App</div>
-    );
+        <div style={{textAlign: "center"}}>   
+            <h1>{count}</h1>
+        </div>
+    )
 }
-
 export default App;
